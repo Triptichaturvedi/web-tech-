@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id = "adi>">
+
+    </p>
+    <script>
+
+//         const toy= new object( {
+// toy1 : "car",
+// toy2 : "doll",  
+// toy3 : "ball"
+//         });
+//         document.getElementById("adi").innerHTML = toy.toy3;
+        class car {
+            constructor(name, model, year) {
+                this.name = name;  // 'this ' is a  instance variable
+                this.model = model;
+                this.year = year;
+            }
+        }
+        const mycar = new car("ford", "mustang", 2023);
+        document.getElementById("adi").innerHTML = mycar.name + " " + mycar.model + " " + mycar.year; 
+    </script>
+</body>
+</html>

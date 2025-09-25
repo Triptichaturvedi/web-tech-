@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    .counter-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    #count {
+      font-size: 48px;
+      margin: 20px 0;
+      color: #333;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .inc { background-color: #4CAF50; color: white; }
+    .dec { background-color: #f44336; color: white; }
+    .reset { background-color: #008CBA; color: white; }
+  </style>
+</head>
+<body>
+  <div class="counter-box">
+    <h1>Counter App</h1>
+    <p id="count">0</p>
+    <button class="dec" onclick="countDown()">Decrease</button>
+    <button class="inc" onclick="countUp()">Increase</button>
+    <button class="reset" onclick="resetCount()">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const display = document.getElementById("count");
+
+    function countUp() {
+      count++;
+      display.innerText = count;
+    }
+    function countDown() {
+      count--;
+      display.innerText = count;
+    }
+    function resetCount() {
+      count = 0;
+      display.innerText = count;
+    }
+  </script>
+</body>
+</html>

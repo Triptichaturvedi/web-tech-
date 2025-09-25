@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      border: 2px solid #333;
+      border-radius: 12px;
+      padding: 15px;
+      width: 250px;
+      background: #f9f9f9;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    .student {
+      margin: 8px 0;
+      padding: 10px;
+      background: #e0e0ff;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="group1">
+    <h3>Group 1 (Same Branch - CE)</h3>
+  </div>
+
+  <div class="card" id="group2">
+    <h3>Group 2 (Different Branches)</h3>
+  </div>
+
+  <script>
+    let student1 = {
+      name: "Tripti",
+      rollNo: "060",
+      branch: "IT"
+    };
+    let student2 = {
+      name: "Ayush",
+      rollNo: "018",
+      branch: "IT"
+    };
+    let student3 = {
+      name: "Manu",
+      rollNo: "036",
+      branch: "CE"
+    };
+    let student4 = {
+      name: "Nimish",
+      rollNo: "039",
+      branch: "CE"
+    };
+    let student5 = {
+      name: "Mahi",
+      rollNo: "034",
+      branch: "CE"
+    };
+
+   
+    let group1 = [student3, student4, student5];
+   
+    let group2 = [student1, student2];
+
+    function displayStudents(group, elementId) {
+      let container = document.getElementById(elementId);
+      group.forEach(student => {
+        let div = document.createElement("div");
+        div.className = "student";
+        div.textContent = `Name: ${student.name}, RollNo: ${student.rollNo}, Branch: ${student.branch}`;
+        container.appendChild(div);
+      });
+    }
+
+    displayStudents(group1, "group1");
+    displayStudents(group2, "group2");
+  </script>
+
+</body>
+</html>

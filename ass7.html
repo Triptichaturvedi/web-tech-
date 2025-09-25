@@ -1,0 +1,173 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i ;
+        for(let i=1; i<=10; i++){
+
+            document.write(i*+'5' + "<br>");
+            document.write("<hr>");
+        }
+        let even = [];
+        let odd = [];
+        for( let i = 1 ; i <10; i ++){
+        if(i%2 == 0){
+           even.push("even =" + 5*i  + "<br>" )
+        }
+        else if(i%2 != 0){
+            odd.push("odd =" + 5*i + "<br>")
+
+        }}
+        document.write("Even Numbers: " + even.join(", "));
+        document.write("Odd Numbers: " + odd.join(", "));
+       
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of 5 and 8</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            float: left;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h3 {
+            clear: both; /* push summary below tables */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Take input limit from user
+        let n = parseInt(prompt("Enter how many multiples you want: "));
+
+        // Arrays to collect evens and odds separately
+        let even5 = [], odd5 = [];
+        let even8 = [], odd8 = [];
+
+        // Table of 5
+        document.write("<table>");
+        document.write("<tr><th colspan='2'>Table of 5</th></tr>");
+        document.write("<tr><th>i</th><th>i × 5</th></tr>");
+        for (let i = 1; i <= n; i++) {
+            let val = i * 5;
+            document.write("<tr><td>" + i + "</td><td>" + val + "</td></tr>");
+            if (val % 2 === 0) {
+                even5.push(val);
+            } else {
+                odd5.push(val);
+            }
+        }
+        document.write("</table>");
+
+        // Table of 8
+        document.write("<table>");
+        document.write("<tr><th colspan='2'>Table of 8</th></tr>");
+        document.write("<tr><th>i</th><th>i × 8</th></tr>");
+        for (let i = 1; i <= n; i++) {
+            let val = i * 8;
+            document.write("<tr><td>" + i + "</td><td>" + val + "</td></tr>");
+            if (val % 2 === 0) {
+                even8.push(val);
+            } else {
+                odd8.push(val);
+            }
+        }
+        document.write("</table>");
+
+        // Summary section
+        document.write("<h3>Even Numbers in Table of 5: " + even5.join(", ") + "</h3>");
+        document.write("<h3>Odd Numbers in Table of 5: " + odd5.join(", ") + "</h3>");
+        document.write("<h3>Even Numbers in Table of 8: " + even8.join(", ") + "</h3>");
+        document.write("<h3>Odd Numbers in Table of 8: " + odd8.join(", ") + "</h3>");
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables of 5 and 8</title>
+</head>
+<body>
+    <script>
+        
+        let n = parseInt(prompt("Enter how many multiples you want: "));
+
+       
+        let even5 = [];
+        let odd5 = [];
+        document.write("<h3>Table of 5</h3>");
+        for (let i = 1; i <= n; i++) {
+            let val = i * 5;
+            document.write(i + " × 5 = " + val + "<br>");
+            if (val % 2 === 0) {
+                even5.push(val);
+            } else {
+                odd5.push(val);
+            }
+        }
+        document.write("<b>Even:</b> " + even5.join(", ") + "<br>");
+        document.write("<b>Odd:</b> " + odd5.join(", ") + "<br><br>");
+
+    
+        let even8 = [];
+        let odd8 = [];
+        document.write("<h3>Table of 8</h3>");
+        for (let i = 1; i <= n; i++) {
+            let val = i * 8;
+            document.write(i + " × 8 = " + val + "<br>");
+            if (val % 2 === 0) {
+                even8.push(val);
+            } else {
+                odd8.push(val);
+            }
+        }
+        document.write("<b>Even:</b> " + even8.join(", ") + "<br>");
+        document.write("<b>Odd:</b> " + odd8.join(", ") + "<br>");
+    </script>
+</body>
+</html>
